@@ -4,6 +4,8 @@ return {
     "nvim-telescope/telescope.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
+      -- Optional
+      "nvim-tree/nvim-web-devicons",
       -- Extensions
       "nvim-telescope/telescope-ui-select.nvim",
     },
