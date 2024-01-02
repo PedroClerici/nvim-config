@@ -6,7 +6,7 @@ return {
     require("onedarkpro").setup({
       options = {
         transparency = true,
-        terminal_colors = true
+        terminal_colors = true,
       },
     })
 

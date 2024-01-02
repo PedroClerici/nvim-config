@@ -15,7 +15,7 @@ vim.o.wrap = false
 -- Undo history
 vim.o.swapfile = false
 vim.o.backup = false
-vim.o.undodir = os.getenv "HOME" .. "/.config/nvim/.undodir"
+vim.o.undodir = os.getenv("HOME") .. "/.config/nvim/.undodir"
 vim.o.undofile = true
 
 -- Highlight search

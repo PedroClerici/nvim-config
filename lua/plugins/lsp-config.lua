@@ -13,8 +13,8 @@ return {
               package_installed = "󰄳 ",
               package_uninstalled = " 󰚌",
             },
-          }
-        }
+          },
+        },
       },
       {
         "williamboman/mason-lspconfig.nvim",

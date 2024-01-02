@@ -24,7 +24,7 @@ return {
       local cmp = require("cmp")
       cmp.setup({
         completion = {
-          completeopt = 'menu,menuone,noinsert'
+          completeopt = "menu,menuone,noinsert",
         },
         window = {
           documentation = cmp.config.window.bordered(),
@@ -79,8 +79,8 @@ return {
           { name = "nvim_lsp" },
           { name = "luasnip" },
         }, {
-            { name = "buffer" },
-          }),
+          { name = "buffer" },
+        }),
       })
     end,
   },
