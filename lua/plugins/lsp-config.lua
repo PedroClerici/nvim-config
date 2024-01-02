@@ -5,9 +5,16 @@ return {
       {
         "williamboman/mason.nvim",
         lazy = false,
-        config = function()
-          require("mason").setup()
-        end,
+        opts = {
+          ui = {
+            border = "rounded",
+            icons = {
+              package_pending = " ",
+              package_installed = "󰄳 ",
+              package_uninstalled = " 󰚌",
+            },
+          }
+        }
       },
       {
         "williamboman/mason-lspconfig.nvim",
@@ -16,6 +23,7 @@ return {
           auto_install = true,
         },
       },
+      "hrsh7th/cmp-nvim-lsp",
       -- Optional
       {
         "folke/neodev.nvim",
@@ -32,10 +40,13 @@ return {
       local lspconfig = require("lspconfig")
 
       -- Setup multiple servers with same default options
-      local servers = { "tsserver", "html", "lua_ls" }
+      local servers = { "tsserver", "html", "cssls", "emmet_language_server", "lua_ls" }
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       for _, lsp in ipairs(servers) do
-        lspconfig[lsp].setup({})
+        lspconfig[lsp].setup({
+          capabilities = capabilities,
+        })
       end
 
       -- Keymaps
