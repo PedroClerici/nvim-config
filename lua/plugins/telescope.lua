@@ -17,6 +17,11 @@ return {
               ["<Esc>"] = require("telescope.actions").close,
             },
           },
+          layout_config = {
+            horizontal = {
+              preview_width = 0.55,
+            },
+          },
         },
         extensions = {
           ["ui-select"] = {
